@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Fastjar by Distrotech</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Fastjar</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Distrotech/fastjar/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Distrotech/fastjar/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Distrotech/fastjar" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1></h1>
+
+<p>FastJar 0.90</p>
+
+<h1>
+<a name="1261999" class="anchor" href="#1261999"><span class="octicon octicon-link"></span></a>12/6/1999</h1>
+
+<p>FastJar is an attempt at creating a feature-for-feature copy of Sun's JDK's
+'jar' command.  Sun's jar (or Blackdown's for that matter) is written entirely
+in Java which makes it dog slow.  Since FastJar is written in C, it can create
+the same .jar file as Sun's tool in a fraction of the time.  On my system,
+Sun's jar takes 50 seconds to create a 10MB jar file, while FastJar only takes
+a little over a second.  </p>
+
+<p>The reason I wrote fastjar is that building .jar files is a regular process
+of the build where I work.  The way we have it setup, you have to re-create
+the .jar file everytime you want to test it out, which is about every 5 minutes
+when I'm busy coding.  The .jar file wasn't -that- big, but it did take about
+30 seconds to be made, and watching all the garbage collection messages was
+pretty irritating as well.  I probably wasted a half-hour a day watching
+Sun's jar tool chug along.  By writing the program in C, I spend much less time
+banging my head against the monitor waiting for the build to finish.  Yay!</p>
+
+<p>FastJar has been tested on Solaris and Linux 2.2.x systems and nothing else. 
+It should compile/run without any problems on either system, provided you have
+zlib installed.  </p>
+
+<p>Please mail any bug reports to <a href="mailto:burnsbr@ucs.orst.edu">burnsbr@ucs.orst.edu</a>.</p>
+
+<p>If you use FastJar and want me to add the rest of the features, send me mail
+(<a href="mailto:toast@users.sourceforge.net">toast@users.sourceforge.net</a>).  I'll be much more likely to put more work into this
+if I know other people find it useful other than me.</p>
+
+<p>As always, this not being a final release, bugs may exist.  I test each
+release pretty well, but I can always miss things...</p>
+
+<p>Compression will slow things down quite a bit.  A 10MB jar file takes about
+1 second on my machine without compression, and 9 seconds with it.  If you
+want fastjar to be fast, use the -0 (zero, not O) flag to turn off compression.</p>
+
+<h2>
+<a name="supported-flags" class="anchor" href="#supported-flags"><span class="octicon octicon-link"></span></a>Supported flags:</h2>
+
+<p>-c  | create a new archive
+-v  | verbose output
+-f  | specify archive file name
+-m  | specify existing manifest file
+-M  | don't create manifest
+-0  | store only
+-C  | change to dir
+-t  | list contents
+-x  | extract contents</p>
+
+<h2>
+<a name="unsupported-flags" class="anchor" href="#unsupported-flags"><span class="octicon octicon-link"></span></a>Unsupported flags:</h2>
+
+<p>-u  | update exisiting archive</p>
+
+<p>If you use the "unsupported" flags, nothing bad will happen, but then again
+nothing will happen at all.  </p>
+
+<h2>
+<a name="unsupported-features-in-this-release" class="anchor" href="#unsupported-features-in-this-release"><span class="octicon octicon-link"></span></a>Unsupported features (in this release):</h2>
+
+<ul>
+<li>updating</li>
+<li>full manifest support (?)</li>
+</ul><h2>
+<a name="order-or-features-for-the-future" class="anchor" href="#order-or-features-for-the-future"><span class="octicon octicon-link"></span></a>Order or features for the future:</h2>
+
+<ul>
+<li>archive updating</li>
+<li>full manifest support</li>
+<li>filtering</li>
+<li>dependency checking</li>
+</ul><h1></h1>
+
+<p><a href="http://fastjar.sourceforge.net">http://fastjar.sourceforge.net</a>
+<a href="mailto:toast@users.sourceforge.net">toast@users.sourceforge.net</a></p>
+        </section>
+
+        <footer>
+          Fastjar is maintained by <a href="https://github.com/Distrotech">Distrotech</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
